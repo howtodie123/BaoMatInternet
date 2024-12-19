@@ -1,32 +1,30 @@
-package com.example.demo.entity;
+package com.example.baomatinternet.entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+
 @Entity
-@Table(name = "emails")
+@Table(name = "email")
 public class email {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "to", nullable = false)
-    private String to;
+    @Column(name = "username", nullable = false)
+    private String username;
 
-    @Column(name = "subject", nullable = false)
-    private String subject;
+    @Column(name = "password", nullable = false)
+    private String password;
 
-    @Column(name = "text", nullable = false)
-    private String text;
-
-    @Column(name = "idbin")
-    private String idbin;
+    @Column(name = "app", nullable = false)
+    private String app;
 
 }
